@@ -1,54 +1,84 @@
-# README Template
+# Data Science Nanodegree: ML Pipelines Project
 
-Below is a template provided for use when building your README file for students.
-
-# Project Title
-
-Project description goes here.
+This project demonstrates the implementation of machine learning pipelines using Scikit-learn. It focuses on creating reproducible, maintainable, and production-ready ML workflows.
 
 ## Getting Started
 
-Instructions for how to get a copy of the project running on your local machine.
+These instructions will help you set up and run the project on your local machine for development and testing purposes.
 
 ### Dependencies
 
-```
-Examples here
-```
+You need jupyter notebook to run the code. Instructions on how to install jupyter notebook can be found [here](https://jupyter.org/install).
+
+You need the following dependencies (used versions in parentheses!):
+
+- scikit-learn (1.6.1)
+- pandas (2.2.3)
+- spacy (3.8.7)
+- notebook(7.4.3)
+- matplotlib (3.10.3)
+
 
 ### Installation
 
-Step by step explanation of how to get a dev environment running.
-
-List out the steps
+1. Clone this repository to your local machine:
 
 ```
-Give an example here
+git clone https://github.com/yourusername/dsnd-pipelines-project.git
+```
+
+2. Navigate to the project directory:
+
+```
+cd dsnd-pipelines-project`
+````
+
+3. Create and activate a virtual environment (optional but recommended):
+
+
+```
+python -m venv venv
+source venv/bin/activate  # On Windows, use: venv\Scripts\activate
+```
+
+4. Install the dependencies:
+
+```
+pip install -r requirements.txt
 ```
 
 ## Testing
 
-Explain the steps needed to run any automated tests
-
-### Break Down Tests
-
-Explain what each test does and why
-
-```
-Examples here
-```
+there are no tests yet
 
 ## Project Instructions
 
-This section should contain all the student deliverables for this project.
+The project is contained in the `starter.ipynb` file.
+It covers the following steps:
 
-## Built With
-
-* [Item1](www.item1.com) - Description of item
-* [Item2](www.item2.com) - Description of item
-* [Item3](www.item3.com) - Description of item
-
-Include all items used to build project.
+1. <b>Data Loading and Exploration </b></br>
+   - Loads the data from the csv file and performs some basic exploration.
+2. <b>Data Preparation</b></br>
+   - Preparing features (`X`) & target (`y`)
+   - Split the data into training and test sets.
+3. <b>Feature Engineering</b>
+   - Split data into numerical and categorical features
+   - Plot some charts to understand the data
+4. <b>Build the pipelines</b>
+   - numerical pipeline (imputation and scaling)
+   - categorical pipeline (imputation and encoding)
+   - text pipeline (preprocessing and vectorization)
+   - full pipeline (combining all the above pipelines and add Random Forest classifier)
+5. Evaluate the model
+   - fit the model
+   - calculate the accuracy score
+   - plot the confusion matrix
+6. Model Fine-tuning
+   - Perform hyperparameter tuning using RandomizedSearchCV
+   - Perform hyperparameter tuning using RandomizedSearchCV
+   - Evaluate the model with the best hyperparameters
+     - calculate the accuracy score
+     - plot the confusion matrix
 
 ## License
 
